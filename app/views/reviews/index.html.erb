@@ -1,0 +1,8 @@
+<ul>
+<% @reviews.each do |rev| %>
+    <li><%= rev.restaurant.name %></li>
+    <li><%= rev.rating %></li>
+    <li><%= rev.content %></li><br><br>
+<% end %>
+
+</ul>

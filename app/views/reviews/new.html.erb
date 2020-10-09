@@ -1,0 +1,10 @@
+<%= form_for @review do |f| %>
+    <%= f.label :rating %>
+    <%= f.number_field :rating %>
+    <%= f.label :content %>
+    <%= f.text_area :content %>
+    <%= f.label :restaurant %>
+    <%= f.collection_select :restaurant_id, Restaurant.all, :id, :name %>
+    <%= f.hidden_field :user_id %>
+    <%= f.submit "Submit" %>
+<% end %>
